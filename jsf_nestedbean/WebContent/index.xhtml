@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<h:body>
+	<h:form>
+		First Name:<h:inputText value="#{e1.name.firstName}"/><br/>
+		Last Name:<h:inputText value="#{e1.name.lastName}"/><br/>
+		Company:<h:inputText value="#{e1.company.companyName}"/><br/>
+		Business:<h:inputText value="#{e1.company.business}"/><br/>
+		<h:commandButton value="Process" action="#{e1.processEmployee}"/>
+		<p/>
+		<ul>
+			<li>First Name:#{e1.name.firstName}</li>
+			<li>Last Name:#{e1.name.lastName}</li>
+			<li>Company:#{e1.company.companyName}</li>
+			<li>Business:#{e1.company.business}</li>
+		</ul>
+	</h:form>
+</h:body>
+</html>
