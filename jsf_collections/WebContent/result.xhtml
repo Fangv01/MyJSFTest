@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+</head>
+<h:body>
+	<table><a href="using-collections.xhtml">Back</a></table>
+	<ul>
+	<li><b>Cheap Items</b>
+	<ol>
+		<li>#{pc.cheapItems[0]}</li>
+		<li>#{pc.cheapItems[1]}</li>
+		<li>#{pc.cheapItems[2]}</li>
+	</ol></li>
+	<li><b>Medium Items</b>
+	<ol>
+		<li>#{pc.mediumItems[0]}</li>
+		<li>#{pc.mediumItems[1]}</li>
+		<li>#{pc.mediumItems[2]}</li>
+	</ol></li>
+	<li><b>Valuable Items</b>
+	<ul>
+		<li>Low: #{pc.valuableItems["low"]}</li>
+		<li>Medium: #{pc.valuableItems["medium"]}</li>
+		<li>High: #{pc.valuableItems["high"]}</li>
+	</ul></li>
+	</ul>
+	
+</h:body>
+</html>

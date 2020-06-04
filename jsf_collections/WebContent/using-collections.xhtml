@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<h:body>
+	<h:form>
+	<ul>
+		<li><b>Cheap Items</b>
+		<ol>
+			<li><h:inputText value="#{pc.cheapItems[0]}"/></li>
+			<li><h:inputText value="#{pc.cheapItems[1]}"/></li>
+			<li><h:inputText value="#{pc.cheapItems[2]}"/></li>
+		</ol>
+		</li>
+		<li><b>Medium Items</b>
+		<ol>
+			<li><h:inputText value="#{pc.mediumItems[0]}"/></li>
+			<li><h:inputText value="#{pc.mediumItems[1]}"/></li>
+			<li><h:inputText value="#{pc.mediumItems[2]}"/></li>
+		</ol>
+		</li>
+		<li><b>Valuable Items</b>
+		<ul>
+			<li>Low:<h:inputText value='#{pc.valuableItems["low"]}'/></li>
+			<li>Medium:<h:inputText value='#{pc.valuableItems["medium"]}'/></li>
+			<li>High:<h:inputText value='#{pc.valuableItems["high"]}'/></li>
+		</ul>
+		</li>
+	</ul>
+	<h:commandButton value="Purchase" rendered="true" action="result.xhtml"/>
+	</h:form>
+</h:body>
+</html>
