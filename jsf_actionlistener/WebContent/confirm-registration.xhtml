@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<f:view locale="#{set.locale}">
+<h:body styleClass="#{set.bodyStyleClass}">
+<table border="5" align="center">
+	<tr><th class="title">#{msg.successTitle}</th></tr>
+</table>
+<h3>#{msg.successText}</h3>
+<ul>
+	<li>#{msg.firstName}: #{p1.firstName}</li>
+	<li>#{msg.lastName}: #{p1.lastName}</li>
+	<li>#{msg.emailAddress}: #{p1.emailAddress}</li>
+</ul>
+</h:body></f:view>
+</html>

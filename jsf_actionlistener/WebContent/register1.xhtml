@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>#{msg.registrationTitle}</title>
+<link href="./css/styles.css" 
+	  rel="stylesheet" type="text/css"/>
+</h:head>
+<h:body styleClass="#{set.bodyStyleClass}">
+<table border="5" align="center">
+	<tr><th class="title">#{msg.registrationTitle}</th></tr>
+</table>
+<h3>
+	<h:outputFormat value="#{msg.registrationText}">
+		<f:param value="#{msg.firstName}"/>
+		<f:param value="#{msg.lastName}"/>
+		<f:param value="#{msg.emailAddress}"/>
+	</h:outputFormat>
+</h3>
+<h:form>
+<fieldset>
+	<legend>#{msg.registrationTitle}</legend>
+	<h:outputFormat value="#{msg.prompt}">
+		<f:param value="#{msg.firstName}"/>
+	</h:outputFormat>:
+	<h:inputText value="#{p1.firstName}"/><br/>
+	
+	<h:outputFormat value="#{msg.prompt}">
+		<f:param value="#{msg.lastName}"/>
+	</h:outputFormat>:
+	<h:inputText value="#{p1.lastName}"/><br/>
+	
+	<h:outputFormat value="#{msg.prompt}">
+		<f:param value="#{msg.emailAddress}"/>
+	</h:outputFormat>:
+	<h:inputText value="#{p1.emailAddress}"/><br/>
+	
+	<h:commandButton value="#{msg.buttonLabel}" 
+					 action="#{p1.doRegistration}"/>
+	
+</fieldset><br/>
+<div align="center">
+	<h:commandButton value="#{msg.normalFont}"
+					 actionListener="#{set.setNormalSize}"
+					 immediate="true"/>
+	<h:commandButton value="#{msg.largeFont}"
+					 actionListener="#{set.setLargeSize}"
+					 immediate="true"/>
+</div>
+</h:form>	
+</h:body>
+</html>
