@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<link href="./css/styles.css"
+	  rel="stylesheet" type="text/css"/>
+<script src="./scripts/utils.js"
+		type="text/javascript"/>
+</h:head>
+<h:body>
+	<h:form>
+	<fieldset>
+		<legend>Bank Customer Lookup (with onevent)</legend>
+		Customer ID:
+		<h:inputText value="#{bank.customerId}"/><br/>
+		Password:
+		<h:inputSecret value="#{bank.password}"/><br/>
+		<h:commandButton value="Show Current Balance"
+						 action="#{bank.showBalance}">
+			<f:ajax execute="@form" 
+					render="ajaxMessage1"
+					onevent="showWorkingIndicator"/>
+		</h:commandButton><br/>
+		<h2>
+			<span id="workingIndicator"
+				  style="display: none; font-size: 60%">
+				<img src="./images/ajax-loader.gif"/>
+				Loading data from server...
+			</span>
+			<h:outputText value="#{bank.message}"
+						  id="ajaxMessage1"/>
+		
+		</h2>
+	</fieldset>
+	</h:form>
+</h:body>
+</html>
