@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<link href="./css/styles.css"
+	  rel="stylesheet" type="text/css"/>
+</h:head>
+<h:body>
+<h:form>
+	<h:dataTable var="programmer"
+				 value="#{company1.programmers}"
+				 border="1">
+		<f:facet name="caption">Programmers at #{company1.companyName}</f:facet>
+		<h:column><f:facet name="header">First Name</f:facet>#{programmer.firstName}</h:column>
+		<h:column><f:facet name="header">Last Name</f:facet>#{programmer.lastName}</h:column>
+		<h:column>
+    		<f:facet name="header">Experience Level</f:facet>
+    		(<i>Edit?
+	    <h:selectBooleanCheckbox value="#{programmer.levelEditable}">
+	     	<f:ajax render="@form"/>
+	    </h:selectBooleanCheckbox></i>)
+	    <h:inputText value="#{programmer.level}" size="12"
+	                 rendered="#{programmer.levelEditable}"/>
+	    <h:commandButton value="Update" rendered="#{programmer.levelEditable}">
+	      	<f:ajax render="@form" execute="@form"/>
+	    </h:commandButton>
+	    <h:outputText value="#{programmer.level}" 
+	                  rendered="#{!programmer.levelEditable}"/>
+	  	</h:column>
+		<h:column><f:facet name="header">Languages</f:facet>#{programmer.languageList}</h:column>	 
+	</h:dataTable>
+</h:form>
+</h:body>
+</html>
