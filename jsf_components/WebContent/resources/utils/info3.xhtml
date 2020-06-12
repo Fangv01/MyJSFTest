@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:composite="http://java.sun.com/jsf/composite"
+	  xmlns:utils="http://java.sun.com/jsf/composite/utils">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+	<composite:interface>
+		<composite:attribute name="styleClass"/>
+	</composite:interface>
+	<composite:implementation>
+		<table align="right">
+			<tr><th><a href="#{request.contextPath}/cc.jsf">return to main page</a> </th></tr>
+		</table>
+		<utils:programmerInfo styleClass="#{cc.attrs.styleClass}"/>
+	</composite:implementation>
+</body>
+</html>
