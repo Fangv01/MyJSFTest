@@ -6,8 +6,15 @@ import javax.faces.context.FacesContext;
 public class CustomerBackingBean {
 	private String inputID, password;
 	private Customer customer;
-	private ColorPreferences colorPreference;
+	private ColorPreferences colorPreferences;
 	private CustomerLookupService lookupService;
+
+	public String getInputID() {
+		return inputID;
+	}
+	public void setInputID(String inputID) {
+		this.inputID = inputID;
+	}
 	public String getPassword() {
 		return password;
 	}
@@ -20,17 +27,11 @@ public class CustomerBackingBean {
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
 	}
-	public String getInputID() {
-		return inputID;
+	public ColorPreferences getColorPreferences() {
+		return colorPreferences;
 	}
-	public void setInputID(String inputID) {
-		this.inputID = inputID;
-	}
-	public ColorPreferences getColorPreference() {
-		return colorPreference;
-	}
-	public void setColorPreference(ColorPreferences colorPreference) {
-		this.colorPreference = colorPreference;
+	public void setColorPreferences(ColorPreferences colorPreferences) {
+		this.colorPreferences = colorPreferences;
 	}
 	public CustomerLookupService getLookupService() {
 		return lookupService;

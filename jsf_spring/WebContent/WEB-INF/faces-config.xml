@@ -7,6 +7,7 @@
 	<application>
 		<variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver>
 	</application>
+	<!--
 	<managed-bean>
     	<managed-bean-name>formBean</managed-bean-name>
 	    <managed-bean-class>jsf_spring.CustomerBackingBean</managed-bean-class>
@@ -16,8 +17,9 @@
       		<value>#{sampleLookupService}</value>
     	</managed-property>
     	<managed-property>
-      		<property-name>colorPreference</property-name>
+      		<property-name>colorPreferences</property-name>
       		<value>#{colorPreferences}</value>
     	</managed-property>
   	</managed-bean>
+  	-->
 </faces-config>

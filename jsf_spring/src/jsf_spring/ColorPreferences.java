@@ -1,12 +1,9 @@
 package jsf_spring;
 
-import java.io.Serializable;
+import java.io.*;
 
 public class ColorPreferences implements Serializable {
-  /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
   private String foreground="black", background="#fdf5e6";
 
   public String getForeground() {

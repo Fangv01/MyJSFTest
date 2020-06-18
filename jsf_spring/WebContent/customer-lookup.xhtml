@@ -9,7 +9,7 @@
 <link href="./css/styles.css" 
       rel="stylesheet" type="text/css"/> 
 </h:head>
-<h:body style = "#{formBean.colorPreference.style}" >
+<h:body style="#{formBean.colorPreferences.style}" >
 	<table border="5" align="center">
   <tr><th class="title">Spring Bank</th></tr>
 </table>
@@ -36,11 +36,11 @@
     </label><br/>
     <label>
       Preferred foreground color: 
-      <h:inputText value="#{formBean.colorPreference.foreground}"/>
+      <h:inputText value="#{formBean.colorPreferences.foreground}"/>
     </label><br/>
     <label>
       Preferred background color: 
-      <h:inputText value="#{formBean.colorPreference.background}"/>
+      <h:inputText value="#{formBean.colorPreferences.background}"/>
     </label><br/>
     <h:commandButton value="Show Balance"
                      action="#{formBean.findBalance}"/>

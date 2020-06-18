@@ -3,8 +3,13 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 						   http://www.springframework.org/schema/beans/spring-beans.xsd">
-						   
-	<bean id="colorPreferences" class="jsf_spring.ColorPreferences" scope="session">
+	<bean id="formBean" 
+       	  class="jsf_spring.CustomerBackingBean" 
+          scope="request">
+    	<property name="lookupService" ref="sampleLookupService"/>
+    	<property name="colorPreferences" ref="colorPreferences"/>
+  	</bean>			   
+	<bean id="colorPreferences" class="jsf_spring.ColorPreferences">
 		<property name="foreground" value="black"/>
 		<property name="background" value="#fdf5e6"/>
 	</bean>
@@ -46,10 +51,5 @@
       		</map>
 		</property>
 	</bean>
-	<bean id="formBean" 
-       	  class="jsf_spring.CustomerBackingBean" 
-          scope="request">
-    <property name="lookupService" ref="sampleLookupService"/>
-    <property name="colorPreferences" ref="colorPreferences"/>
-  </bean>
+	
 </beans>
